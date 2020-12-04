@@ -27,7 +27,6 @@ public class Cliente {
 			String telefonoCliente, String faxCliente, String direccionCliente, String direccion2Cliente,
 			String ciudadCliente, String regionCliente, String paisCliente, String codigoPostalCliente,
 			int codigoEmpleadoRepVentas, double limiteCredito) {
-		super();
 		this.codigoCliente = codigoCliente;
 		this.nombreCliente = nombreCliente;
 		this.contactoCliente = contactoCliente;
@@ -98,5 +97,15 @@ public class Cliente {
 
 	public double getLimiteCredito() {
 		return limiteCredito;
+	}
+
+	@Override
+	public String toString() {
+		return "Cliente [codigoCliente=" + codigoCliente + ", nombreCliente=" + nombreCliente + ", contactoCliente="
+				+ contactoCliente + ", apellidoCLiente=" + apellidoCLiente + ", telefonoCliente=" + telefonoCliente
+				+ ", faxCliente=" + faxCliente + ", direccionCliente=" + direccionCliente + ", direccion2Cliente="
+				+ direccion2Cliente + ", ciudadCliente=" + ciudadCliente + ", regionCliente=" + regionCliente
+				+ ", paisCliente=" + paisCliente + ", codigoPostalCliente=" + codigoPostalCliente
+				+ ", codigoEmpleadoRepVentas=" + codigoEmpleadoRepVentas + ", limiteCredito=" + limiteCredito + "]";
 	}
 }

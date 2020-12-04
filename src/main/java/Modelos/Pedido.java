@@ -11,9 +11,8 @@ public class Pedido {
 	private String comentarios;
 	private int codigo_cliente;
 
-	public Pedido(int codigoPedido, Calendar fechaPedido, Calendar fechaEsperada, Calendar fechaEntrega, String estadoPedido,
-			String comentarios, int codigo_cliente) {
-		super();
+	public Pedido(int codigoPedido, Calendar fechaPedido, Calendar fechaEsperada, Calendar fechaEntrega,
+			String estadoPedido, String comentarios, int codigo_cliente) {
 		this.codigoPedido = codigoPedido;
 		this.fechaPedido = fechaPedido;
 		this.fechaEsperada = fechaEsperada;

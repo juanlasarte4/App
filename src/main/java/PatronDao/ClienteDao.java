@@ -1,15 +1,33 @@
 package PatronDao;
 
+import Modelos.Cliente;
+
 import java.util.List;
 
-public interface ClienteDao<T, E> {
-	void insertar(T a);
+public class ClienteDao implements Dao<Cliente> {
 
-	void modificar(T a);
+	@Override
+	public void insertar(Cliente a) {
 
-	void eliminar(T a);
+	}
 
-	List<T> obtenerTodos();
+	@Override
+	public void modificar(Cliente a) {
 
-	T obtener(E id);
+	}
+
+	@Override
+	public void eliminar(Cliente a) {
+
+	}
+
+	@Override
+	public List<Cliente> obtenerTodos() {
+		return null;
+	}
+
+	@Override
+	public Cliente obtener(int id) {
+		return null;
+	}
 }

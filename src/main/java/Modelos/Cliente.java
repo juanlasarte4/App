@@ -1,5 +1,7 @@
 package Modelos;
 
+import Excepciones.*;
+
 public class Cliente {
 	private int codigoCliente;
 	private String nombreCliente;
@@ -15,9 +17,12 @@ public class Cliente {
 	private String codigoPostalCliente;
 	private int codigoEmpleadoRepVentas;
 	private double limiteCredito;
+	private TipoDocumento tipoDocumento;
+	private String DNI;
+	private String email;
+	private String password;
 
 	public Cliente(int codigoCliente, String nombreCliente, String apellidoCLiente) {
-		super();
 		this.codigoCliente = codigoCliente;
 		this.nombreCliente = nombreCliente;
 		this.apellidoCLiente = apellidoCLiente;
@@ -26,7 +31,7 @@ public class Cliente {
 	public Cliente(int codigoCliente, String nombreCliente, String contactoCliente, String apellidoCLiente,
 			String telefonoCliente, String faxCliente, String direccionCliente, String direccion2Cliente,
 			String ciudadCliente, String regionCliente, String paisCliente, String codigoPostalCliente,
-			int codigoEmpleadoRepVentas, double limiteCredito) {
+			int codigoEmpleadoRepVentas, double limiteCredito, TipoDocumento tipoDocumento, String DNI, String password) {
 		this.codigoCliente = codigoCliente;
 		this.nombreCliente = nombreCliente;
 		this.contactoCliente = contactoCliente;
@@ -41,10 +46,101 @@ public class Cliente {
 		this.codigoPostalCliente = codigoPostalCliente;
 		this.codigoEmpleadoRepVentas = codigoEmpleadoRepVentas;
 		this.limiteCredito = limiteCredito;
+		this.tipoDocumento = tipoDocumento;
+		this.DNI = DNI;
+		this.password = password;
 	}
 
 	public int getCodigoCliente() {
 		return codigoCliente;
+	}
+
+	public TipoDocumento getTipoDocumento() {
+		return tipoDocumento;
+	}
+
+	public void setTipoDocumento(TipoDocumento tipoDocumento) {
+		this.tipoDocumento = tipoDocumento;
+	}
+
+	public String getDNI() {
+		return DNI;
+	}
+
+	public void setDNI(String dNI) {
+		DNI = dNI;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public void setCodigoCliente(int codigoCliente) {
+		this.codigoCliente = codigoCliente;
+	}
+
+	public void setNombreCliente(String nombreCliente) {
+		this.nombreCliente = nombreCliente;
+	}
+
+	public void setContactoCliente(String contactoCliente) {
+		this.contactoCliente = contactoCliente;
+	}
+
+	public void setApellidoCLiente(String apellidoCLiente) {
+		this.apellidoCLiente = apellidoCLiente;
+	}
+
+	public void setTelefonoCliente(String telefonoCliente) {
+		this.telefonoCliente = telefonoCliente;
+	}
+
+	public void setFaxCliente(String faxCliente) {
+		this.faxCliente = faxCliente;
+	}
+
+	public void setDireccionCliente(String direccionCliente) {
+		this.direccionCliente = direccionCliente;
+	}
+
+	public void setDireccion2Cliente(String direccion2Cliente) {
+		this.direccion2Cliente = direccion2Cliente;
+	}
+
+	public void setCiudadCliente(String ciudadCliente) {
+		this.ciudadCliente = ciudadCliente;
+	}
+
+	public void setRegionCliente(String regionCliente) {
+		this.regionCliente = regionCliente;
+	}
+
+	public void setPaisCliente(String paisCliente) {
+		this.paisCliente = paisCliente;
+	}
+
+	public void setCodigoPostalCliente(String codigoPostalCliente) {
+		this.codigoPostalCliente = codigoPostalCliente;
+	}
+
+	public void setCodigoEmpleadoRepVentas(int codigoEmpleadoRepVentas) {
+		this.codigoEmpleadoRepVentas = codigoEmpleadoRepVentas;
+	}
+
+	public void setLimiteCredito(double limiteCredito) {
+		this.limiteCredito = limiteCredito;
 	}
 
 	public String getNombreCliente() {
@@ -106,6 +202,8 @@ public class Cliente {
 				+ ", faxCliente=" + faxCliente + ", direccionCliente=" + direccionCliente + ", direccion2Cliente="
 				+ direccion2Cliente + ", ciudadCliente=" + ciudadCliente + ", regionCliente=" + regionCliente
 				+ ", paisCliente=" + paisCliente + ", codigoPostalCliente=" + codigoPostalCliente
-				+ ", codigoEmpleadoRepVentas=" + codigoEmpleadoRepVentas + ", limiteCredito=" + limiteCredito + "]";
+				+ ", codigoEmpleadoRepVentas=" + codigoEmpleadoRepVentas + ", limiteCredito=" + limiteCredito
+				+ ", tipoDocumento=" + tipoDocumento + ", DNI=" + DNI + ", email=" + email + ", password=" + password
+				+ "]";
 	}
 }

@@ -16,54 +16,23 @@ public class ClienteBuilder {
 				telefonoCliente, faxCliente, direccionCliente, direccion2Cliente, ciudadCliente, regionCliente,
 				paisCliente, codigoPostalCliente, codigoEmpleadoRepVentas, limiteCredito, tipoDocumento, DNI, password);
 
-		boolean datos_necesarios_asignados = true;
-		datos_necesarios_asignados &= (clienteABuildear.getCodigoCliente() != 0) && (clienteABuildear.getNombreCliente() != null)
-				&& (clienteABuildear.getTelefonoCliente() != null) && (clienteABuildear.getFaxCliente() != null)
-				&& (clienteABuildear.getDireccionCliente() != null) && (clienteABuildear.getCiudadCliente() != null);
+		boolean testeo;
 
-		if (!datos_necesarios_asignados) {
-			throw new DatoNoValido("Ninguno de los siguientes campos puede tener "
-					+ "su valor por defecto: codigo, nombre, telefono, " + "fax, direccion1, ciudad.");
-		}
-
-		boolean email_bien = true;
-		if (clienteABuildear.email != null && clienteABuildear.email.isPresent()) {
-			if (clienteABuildear.contrasena == null || !clienteABuildear.contrasena.isPresent()) {
-				email_bien = false;
-				throw new DatoNoValido("Deberia haber contraseña!!!");
+		if (clienteABuildear.getTipoDocumento() == TipoDocumento.tipoDocumentoDNI) {
+			if (!clienteABuildear.getDocumento().matches("\\d{8}[A-Z]")) {
+				testeo = false;
+				throw new FormatoIncorrecto("El DNI deberian ser 8 digitos y una letra mayuscula");
 			}
-			// Comprobar que el email es en forma tal @ tal . tal
-			if (!clienteABuildear.email.get().matches("\\w+@\\w+[.][a-zA-Z]+")) {
-				email_bien = false;
-				throw new FormatoIncorrecto("El email debería cumplir \"[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.][a-zA-Z]+\", "
-						+ "pero es " + clienteABuildear.email.get());
+		} else {
+			if (!clienteABuildear.getDocumento().matches("[A-Z]\\d{7}[A-Z]")) {
+				testeo = false;
+				throw new FormatoIncorrecto("El NIE deberia ser una letra mayuscula, 7 digitos y una letra mayuscula");
 			}
 		}
-
-		boolean documento_bien = true;
-		if (clienteABuildear.tipo_doc != null && clienteABuildear.tipo_doc.isPresent()) {
-			if (clienteABuildear.dni == null || !clienteABuildear.dni.isPresent()) {
-				documento_bien = false;
-				throw new DatoNoValido("Debería haber documento!!!");
-			} else {
-				switch (clienteABuildear.tipo_doc.get()) {
-				case DNI: // Comprobar que el documento es 8 dígitos + letra
-					if (!clienteABuildear.dni.get().matches("\\d{8}[a-zA-Z]")) {
-						documento_bien = false;
-						throw new FormatoIncorrecto("El formato DNI debería cumplir \"[0-9]{8}[a-zA-Z]\", " + "pero es "
-								+ clienteABuildear.dni.get());
-					}
-					break;
-				case NIE: // Comprobar que el documento es letra + 7 dígitos + letra
-					if (!clienteABuildear.dni.get().matches("[a-zA-Z]\\d{7}[a-zA-Z]")) {
-						documento_bien = false;
-						throw new FormatoIncorrecto("El formato NIE debería cumplir \"[a-zA-Z][0-9]{7}[a-zA-Z]\", "
-								+ "pero es " + clienteABuildear.dni.get());
-					}
-					break;
-				}
-			}
+		if (!clienteABuildear.getEmail().matches("\\w+@\\w+[.][a-zA-Z]+")) {
+			testeo = false;
+			throw new FormatoIncorrecto("El email deberia contener [cadena]@[cadena].[cadena]");
 		}
-		return datos_necesarios_asignados && email_bien && documento_bien ? clienteABuildear : null;
+		return clienteABuildear;
 	}
 }

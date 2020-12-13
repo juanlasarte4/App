@@ -1,7 +1,5 @@
 package Modelos;
 
-import Excepciones.*;
-
 public class Cliente {
 	private int codigoCliente;
 	private String nombreCliente;
@@ -18,20 +16,14 @@ public class Cliente {
 	private int codigoEmpleadoRepVentas;
 	private double limiteCredito;
 	private TipoDocumento tipoDocumento;
-	private String DNI;
+	private String documento;
 	private String email;
 	private String password;
-
-	public Cliente(int codigoCliente, String nombreCliente, String apellidoCLiente) {
-		this.codigoCliente = codigoCliente;
-		this.nombreCliente = nombreCliente;
-		this.apellidoCLiente = apellidoCLiente;
-	}
 
 	public Cliente(int codigoCliente, String nombreCliente, String contactoCliente, String apellidoCLiente,
 			String telefonoCliente, String faxCliente, String direccionCliente, String direccion2Cliente,
 			String ciudadCliente, String regionCliente, String paisCliente, String codigoPostalCliente,
-			int codigoEmpleadoRepVentas, double limiteCredito, TipoDocumento tipoDocumento, String DNI, String password) {
+			int codigoEmpleadoRepVentas, double limiteCredito, TipoDocumento tipoDocumento, String documento, String password) {
 		this.codigoCliente = codigoCliente;
 		this.nombreCliente = nombreCliente;
 		this.contactoCliente = contactoCliente;
@@ -47,7 +39,7 @@ public class Cliente {
 		this.codigoEmpleadoRepVentas = codigoEmpleadoRepVentas;
 		this.limiteCredito = limiteCredito;
 		this.tipoDocumento = tipoDocumento;
-		this.DNI = DNI;
+		this.documento = documento;
 		this.password = password;
 	}
 
@@ -63,12 +55,12 @@ public class Cliente {
 		this.tipoDocumento = tipoDocumento;
 	}
 
-	public String getDNI() {
-		return DNI;
+	public String getDocumento() {
+		return documento;
 	}
 
-	public void setDNI(String dNI) {
-		DNI = dNI;
+	public void setDocumento(String documento) {
+		this.documento = documento;
 	}
 
 	public String getEmail() {
@@ -203,7 +195,7 @@ public class Cliente {
 				+ direccion2Cliente + ", ciudadCliente=" + ciudadCliente + ", regionCliente=" + regionCliente
 				+ ", paisCliente=" + paisCliente + ", codigoPostalCliente=" + codigoPostalCliente
 				+ ", codigoEmpleadoRepVentas=" + codigoEmpleadoRepVentas + ", limiteCredito=" + limiteCredito
-				+ ", tipoDocumento=" + tipoDocumento + ", DNI=" + DNI + ", email=" + email + ", password=" + password
+				+ ", tipoDocumento=" + tipoDocumento + ", documento=" + documento + ", email=" + email + ", password=" + password
 				+ "]";
 	}
 }

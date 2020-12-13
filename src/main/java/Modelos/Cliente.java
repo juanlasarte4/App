@@ -23,7 +23,7 @@ public class Cliente {
 	public Cliente(int codigoCliente, String nombreCliente, String contactoCliente, String apellidoCLiente,
 			String telefonoCliente, String faxCliente, String direccionCliente, String direccion2Cliente,
 			String ciudadCliente, String regionCliente, String paisCliente, String codigoPostalCliente,
-			int codigoEmpleadoRepVentas, double limiteCredito, TipoDocumento tipoDocumento, String documento, String password) {
+			int codigoEmpleadoRepVentas, double limiteCredito, TipoDocumento tipoDocumento, String documento, String email, String password) {
 		this.codigoCliente = codigoCliente;
 		this.nombreCliente = nombreCliente;
 		this.contactoCliente = contactoCliente;
@@ -40,6 +40,7 @@ public class Cliente {
 		this.limiteCredito = limiteCredito;
 		this.tipoDocumento = tipoDocumento;
 		this.documento = documento;
+		this.email = email;
 		this.password = password;
 	}
 

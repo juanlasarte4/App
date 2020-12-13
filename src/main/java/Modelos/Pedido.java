@@ -77,4 +77,11 @@ public class Pedido {
 	public void setCodigo_cliente(int codigo_cliente) {
 		this.codigo_cliente = codigo_cliente;
 	}
+
+	@Override
+	public String toString() {
+		return "Pedido [codigoPedido=" + codigoPedido + ", fechaPedido=" + fechaPedido + ", fechaEsperada="
+				+ fechaEsperada + ", fechaEntrega=" + fechaEntrega + ", estadoPedido=" + estadoPedido + ", comentarios="
+				+ comentarios + ", codigo_cliente=" + codigo_cliente + "]";
+	}
 }

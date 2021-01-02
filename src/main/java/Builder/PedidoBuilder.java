@@ -15,7 +15,7 @@ public class PedidoBuilder {
 
 		if (pedidoABuildear.getFechaPedido().get(Calendar.DAY_OF_MONTH) != Calendar.getInstance()
 				.get(Calendar.DAY_OF_MONTH)) {
-			throw new WrongOrderDayCreationException("");
+			throw new WrongOrderDayCreationException("La fecha de creacion tiene que ser el dia de hoy");
 		}
 
 		Calendar testPedido = (Calendar) pedidoABuildear.getFechaPedido().clone();

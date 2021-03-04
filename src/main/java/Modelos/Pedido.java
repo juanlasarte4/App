@@ -11,9 +11,8 @@ public class Pedido {
 	private String comentarios;
 	private int codigo_cliente;
 
-	public Pedido(int codigoPedido, Calendar fechaPedido, Calendar fechaEsperada, Calendar fechaEntrega, String estadoPedido,
-			String comentarios, int codigo_cliente) {
-		super();
+	public Pedido(int codigoPedido, Calendar fechaPedido, Calendar fechaEsperada, Calendar fechaEntrega,
+			String estadoPedido, String comentarios, int codigo_cliente) {
 		this.codigoPedido = codigoPedido;
 		this.fechaPedido = fechaPedido;
 		this.fechaEsperada = fechaEsperada;
@@ -77,5 +76,12 @@ public class Pedido {
 
 	public void setCodigo_cliente(int codigo_cliente) {
 		this.codigo_cliente = codigo_cliente;
+	}
+
+	@Override
+	public String toString() {
+		return "Pedido [codigoPedido=" + codigoPedido + ", fechaPedido=" + fechaPedido + ", fechaEsperada="
+				+ fechaEsperada + ", fechaEntrega=" + fechaEntrega + ", estadoPedido=" + estadoPedido + ", comentarios="
+				+ comentarios + ", codigo_cliente=" + codigo_cliente + "]";
 	}
 }

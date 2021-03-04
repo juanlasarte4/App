@@ -7,7 +7,10 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="372.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.App.JavaFX.controlador.MainController">
+<AnchorPane prefHeight="372.0" prefWidth="651.0"
+	xmlns="http://javafx.com/javafx/15.0.1"
+	xmlns:fx="http://javafx.com/fxml/1" 
+	fx:controller="JavaFX.controlador.MainController">
 	<children>
 		<MenuBar layoutX="7.0" layoutY="8.0">
 			<menus>
@@ -23,19 +26,27 @@
 				</Menu>
 			</menus>
 		</MenuBar>
-      <TabPane layoutX="76.0" layoutY="61.0" prefHeight="250.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-          <Tab text="Clientes">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </Tab>
-          <Tab text="Pedidos">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </Tab>
-        </tabs>
-      </TabPane>
+		<TabPane layoutX="76.0" layoutY="61.0" prefHeight="250.0"
+			prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+			<tabs>
+				<Tab text="Clientes">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0"
+							prefHeight="180.0" prefWidth="200.0" />
+					</content>
+				</Tab>
+				<Tab text="Pedidos">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0"
+							prefHeight="180.0" prefWidth="200.0" />
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+
+		<Button layoutX="126" layoutY="90" text="Click Me!"
+			onAction="#handleButtonAction" fx:id="button" />
+		<Label layoutX="126" layoutY="120" minHeight="16" minWidth="69"
+			fx:id="label" />
 	</children>
 </AnchorPane>

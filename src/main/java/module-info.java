@@ -8,11 +8,13 @@ module App {
 	exports Excepciones;
 	exports GUI;
 	exports PatronDao;
-
+	
+	opens JavaFX.controlador to javafx.fxml;
 	requires java.desktop;
 	requires java.sql;
 	requires javafx.base;
 	requires javafx.controls;
 	requires javafx.fxml;
 	requires javafx.graphics;
+	requires junit;
 }

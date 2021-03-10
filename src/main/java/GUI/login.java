@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextArea;
 
+import java.awt.EventQueue;
 import java.awt.Font;
 import javax.swing.ImageIcon;
 import java.awt.SystemColor;
@@ -17,7 +18,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JPanel;
 
-public class login extends JFrame{
+public class login extends JFrame {
 
 	/**
 	 * 
@@ -26,10 +27,11 @@ public class login extends JFrame{
 	private JFrame appJardineria;
 	private JTextField tecladoUsuario;
 	private JPasswordField tecladoClave;
-	
+
 	/**
 	 * Launch the application.
-	 
+	 */
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -42,7 +44,6 @@ public class login extends JFrame{
 			}
 		});
 	}
-	*/
 
 	/**
 	 * Create the application.
@@ -95,7 +96,7 @@ public class login extends JFrame{
 		panelClave.add(botonParaOcultarClave);
 		botonParaOcultarClave.setIcon(new ImageIcon(login.class.getResource("/img/view_eye_icon.png")));
 		botonParaOcultarClave.setVisible(false);
-		
+
 		final JButton botonParaVerClave = new JButton();
 		botonParaVerClave.setBounds(160, 10, 30, 30);
 		panelClave.add(botonParaVerClave);
@@ -133,6 +134,8 @@ public class login extends JFrame{
 		});
 		botonAcceder.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				App frame = new App();
+				frame.setVisible(true);
 			}
 		});
 		botonParaVerClave.addActionListener(new ActionListener() {
@@ -154,7 +157,7 @@ public class login extends JFrame{
 	public JTextField getTecladoUsuario() {
 		return tecladoUsuario;
 	}
-	
+
 	public JPasswordField getTecladoPassword() {
 		return tecladoClave;
 	}

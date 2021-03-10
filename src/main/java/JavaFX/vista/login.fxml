@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFX.controlador.loginController">
+   <children>
+      <Pane layoutX="250.0" layoutY="200.0" prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <Label layoutX="20.0" layoutY="0.0" text="Usuario:" />
+            <Label layoutX="20.0" layoutY="50.0" text="Clave:" />
+            <TextField fx:id="tecladoUsuario" layoutX="70.0" layoutY="0.0" prefHeight="25.0" prefWidth="125.0" />
+            <TextField fx:id="tecladoClaveVista" layoutX="70.0" layoutY="50.0" prefHeight="25.0" prefWidth="125.0" />
+            <PasswordField fx:id="tecladoClaveOculta" layoutX="70.0" layoutY="50.0" prefHeight="25.0" prefWidth="125.0" />
+            <Button fx:id="btnOcultarClave" layoutX="195.0" layoutY="50.0" mnemonicParsing="false" onAction="#ocultarClave" />
+            <Button fx:id="btnVerClave" layoutX="195.0" layoutY="50.0" mnemonicParsing="false" onAction="#verClave" />
+            <TextArea fx:id="taOlvidoClave" editable="false" layoutX="70.0" layoutY="75.0" onMouseClicked="#olvidoClave" prefHeight="20.0" prefWidth="125.0" text="He olvidado la clave" />
+            <Button fx:id="btnAcceder" layoutX="70.0" layoutY="125.0" mnemonicParsing="false" onAction="#acceder" text="Acceder" />
+            <Button fx:id="btnSalir" layoutX="143.0" layoutY="125.0" mnemonicParsing="false" onAction="#salir" text="Salir" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

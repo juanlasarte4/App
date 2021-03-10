@@ -157,7 +157,7 @@ public class createUser extends JFrame {
 		campoEmail.setBounds(0, 300, 200, 15);
 		panelPedirDatos.add(campoEmail);
 
-		JLabel campoPassword = new JLabel("Password:");
+		JLabel campoPassword = new JLabel("Clave:");
 		campoPassword.setFont(new Font("Unispace", Font.PLAIN, 11));
 		campoPassword.setHorizontalAlignment(SwingConstants.CENTER);
 		campoPassword.setBounds(0, 320, 200, 15);
